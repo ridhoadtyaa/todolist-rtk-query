@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1672633715440,
+      "task": "Mengaji",
+      "completed": false
+    },
+    {
+      "id": 1672633721045,
+      "task": "Belajar",
+      "completed": true
+    },
+    {
+      "id": 1672633723956,
+      "task": "Makan",
+      "completed": false
+    }
+  ]
+}
