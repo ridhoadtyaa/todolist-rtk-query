@@ -4,6 +4,8 @@ import {
   useGetTodoQuery
 } from '@/services/todos'
 
+import Button from './Button'
+
 import { AiOutlineLoading3Quarters as LoadingIcon } from 'react-icons/ai'
 
 const TodoList: React.FunctionComponent = () => {
@@ -20,18 +22,12 @@ const TodoList: React.FunctionComponent = () => {
       {data.map((todo) => (
         <div className='border border-slate-300 p-4' key={todo.id}>
           <h4>{todo.task}</h4>
-          <button
-            className='bg-green-500 text-white font-medium hover:bg-green-600 transition duration-300 px-2 py-1 mt-4 mr-2'
-            onClick={() => changeStatusTodo(todo)}
-          >
+          <Button variant='success' className='mt-4 mr-2' onClick={() => changeStatusTodo(todo)}>
             {todo.completed ? 'Uncompleted' : 'Completed'}
-          </button>
-          <button
-            className='bg-pink-500 text-white font-medium hover:bg-pink-600 transition duration-300 px-2 py-1 mt-4'
-            onClick={() => deleteTodo(todo.id)}
-          >
+          </Button>
+          <Button variant='danger' onClick={() => deleteTodo(todo.id)} className='mt-4'>
             Delete
-          </button>
+          </Button>
         </div>
       ))}
     </div>
